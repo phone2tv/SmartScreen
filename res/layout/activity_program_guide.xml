@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="@color/main_background_color" >
+
+    <ImageView
+        android:id="@+id/banner_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner_default" />
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_banner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/banner_img"
+        android:layout_alignLeft="@+id/banner_img"
+        android:layout_alignRight="@+id/banner_img"
+        android:background="#BF000000"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/text_curprogram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在播出 : "
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_curprogram_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/text_curprogram"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_curprogram_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_curprogram"
+            android:text="节目介绍"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/text_broadcasted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_curprogram_introduce"
+            android:text="进度: "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/text_past_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_curprogram_introduce"
+            android:layout_toRightOf="@+id/text_broadcasted"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/text_watching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_curprogram_introduce"
+            android:layout_toLeftOf="@+id/text_watch_count"
+            android:text="正在观看: "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/text_watch_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_curprogram_introduce"
+            android:text="28"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/arrow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_watch_count"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+    <include 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner_img"
+        layout="@layout/smartscreen_list"/>
+</RelativeLayout>

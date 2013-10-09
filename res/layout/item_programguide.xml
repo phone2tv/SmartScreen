@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/program_name_text"
+        android:layout_marginBottom="-20dp"
+        android:background="@drawable/item_programguide_selector" />
+
+    <TextView
+        android:id="@+id/begin_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:paddingTop="6dp"
+        android:text="00:00"
+        android:textSize="@dimen/item_mid_text_size" />
+
+    <TextView
+        android:id="@+id/end_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/begin_time_text"
+        android:layout_marginLeft="6dp"
+        android:text="23:59"
+        android:textSize="@dimen/item_small_text_size" />
+
+    <TextView
+        android:id="@+id/program_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/discuss_num_text"
+        android:layout_toRightOf="@+id/begin_time_text"
+        android:text="智多屏"
+        android:textSize="@dimen/item_large_text_size" />
+
+    <TextView
+        android:id="@+id/discuss_num_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/program_name_text"
+        android:text="评论(0)"
+        android:textSize="@dimen/item_small_text_size" />
+
+</RelativeLayout>

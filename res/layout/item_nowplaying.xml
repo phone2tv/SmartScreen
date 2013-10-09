@@ -1,0 +1,75 @@
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+       		android:layout_height="match_parent"
+       		android:background="@drawable/item_nowplaying_selector"
+       		android:layout_alignBottom="@+id/tvname_text"/>
+        
+        <RelativeLayout
+            android:id="@+id/hotarea_relativelayout"
+            android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:layout_alignParentRight="true"
+       		android:layout_marginRight="6dp"
+       		android:layout_alignBottom="@+id/tvname_text">
+       		
+       		<TextView
+       		    android:id="@+id/hot_text"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:text="热度"
+       		    android:layout_alignParentRight="true"
+       		    android:layout_above="@+id/hot_ratingbar"
+       		    android:textColor="@color/tv_name_text_color"
+       		    android:textSize="@dimen/item_small_text_size"/>
+
+       		<RatingBar
+       		    android:id="@+id/hot_ratingbar"
+       		    style="@style/SamrtScreenRatingBar"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content" 
+       		    android:layout_alignParentRight="true"
+       		    android:layout_alignParentBottom="true"
+       		    android:numStars="5"
+            	android:rating="5"
+            	android:isIndicator="true"/>
+
+       	</RelativeLayout>
+
+        <ImageView
+            android:id="@+id/logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cctv5"
+            android:clickable="true"/>
+            
+       	<TextView
+       		android:id="@+id/program_name_text"
+       		android:layout_width="wrap_content"
+       		android:layout_height="wrap_content" 
+       		android:layout_toRightOf="@+id/logo_img"
+       		android:layout_marginLeft="6dp"
+       		android:layout_marginRight="20dp"
+       		android:layout_centerInParent="true"
+       		android:textSize="@dimen/item_large_text_size"
+       		android:textColor="@color/program_name_text_color"
+       		android:text="新闻联播"/>
+       		
+       	<TextView
+       	    android:id="@+id/tvname_text"
+       		android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:layout_toRightOf="@+id/logo_img"
+       		android:layout_below="@+id/program_name_text"
+       		android:layout_marginLeft="6dp"
+       		android:layout_marginTop="10dp"
+       		android:text="@string/cctv01"
+       		android:textColor="@color/tv_name_text_color"
+       		android:textSize="@dimen/item_small_text_size"/>
+    </RelativeLayout>

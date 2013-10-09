@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background = "@color/main_background_color">
+    
+    <ListView
+        android:id="@+id/program_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:background="@drawable/program_comment_bg"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_above="@+id/input_frame_relativeLayout"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/input_frame_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+
+        <ImageView
+            android:id="@+id/program_comment_input_bg_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/program_comment_input_editor"
+            android:src="@drawable/program_comment_input_frame_bg"
+            android:scaleType="fitXY"/>
+
+      <EditText
+            android:id="@+id/program_comment_input_editor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="3dp"
+            android:ems="20"
+            android:background="@null"
+            android:hint="发表评论" 
+            android:layout_toLeftOf="@+id/image_sendmessage">    
+        </EditText>
+
+        <ImageView
+            android:id="@+id/image_sendmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/program_comment_input_bg_img"
+            android:layout_alignBottom="@+id/program_comment_input_editor"
+            android:scaleType="fitXY"
+            android:src="@drawable/program_comment_send_msg_selector" 
+            android:paddingBottom="2dp"
+            android:paddingTop="0dp"
+            android:paddingRight="1dp"
+            android:clickable="true"/>
+    </RelativeLayout>
+    
+</RelativeLayout>

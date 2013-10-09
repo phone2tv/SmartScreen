@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <color name="main_background_color">#112E6A</color>
+    <color name="program_name_text_color">#484848</color>
+    <color name="program_name_text_def_color">#7D7D7D</color>
+    <color name="tv_name_text_color">#7D7D7D</color>
+</resources>
